@@ -1,6 +1,6 @@
 ## sd88me
 
-Plugins, ports and addons for Akai MPC series and Schwung (Ableton Move).
+Plugins, ports and addons for Akai MPC and Force.
 
-### Tip
-If these are useful to you, contributions and tips help support the time behind them by buying me coffe, beer, flowers for wife and lollies for my kids!: [ko-fi.com/sd88me](https://ko-fi.com/sd88me).  Details: [DONATIONS](https://github.com/sd88me/.github/blob/main/DONATIONS.md).
+### Tips ☕🍺💐
+Everything here is free. If a plugin made your track better, a tip at [ko-fi.com/sd88me](https://ko-fi.com/sd88me) buys me a coffee, a beer, or (more importantly) flowers for my wife, for all the studio hours. [Read the full story](https://github.com/sd88me/.github/blob/main/TIPS.md).
