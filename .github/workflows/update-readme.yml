@@ -1,0 +1,30 @@
+# Regenerates README.md from the plugin catalog (downloads) and the community signals service (likes).
+# Edit categories and text in tools/gen_readme.py; README.md is overwritten.
+name: Update README
+on:
+  schedule:
+    - cron: '23 5 * * *'   # after the catalog's nightly build (03:17 UTC) and its mirror
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tools/gen_readme.py', '.github/workflows/update-readme.yml']
+permissions:
+  contents: write
+concurrency:
+  group: update-readme
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate README.md
+        run: python3 tools/gen_readme.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- README.md; then echo "No changes."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update plugin counts"
+          git push
