@@ -70,10 +70,10 @@ def table(ids,notes={}):
         rows.append(f"| {thumb(i)} | **[{p['name']}]({SITE}/p/{i}.html)** | {notes.get(i) or short(p['summary'])} | {p['kind']} | {dl(i)} | {likes(i)} | {badge(p['repo'])} |")
     return '\n'.join(rows)
 
-orig=['acid','euclidier','maze-sequencer','maze-voice','lucky-dip','crate-digger','daemon','skipback','profit-5','profit-08','morpho-pe','sturm-tp','clementine-xt']
+orig=['acid','euclidier','maze-sequencer','maze-voice','lucky-dip','crate-digger','daemon','tr-mpc','tr-mpc-tap-fx','skipback','profit-5','profit-08','morpho-pe','sturm-tp','clementine-xt']
 emu=['osirus','xenia','vavra','nodalred2x','welle','je8086','ms2kr','jv-880','machinemodule','monomodule','reverbicon-224']
-sch=['tr-mpc','tr-mpc-tap-fx','tr-6w6','tr-8w8','tr-cw78','tr-9w9','dexed-dx7']
-desk=['j106','model-72','acid-303','ottmpc','boris-granular']
+sch=['tr-6w6','tr-8w8','tr-cw78','tr-9w9']
+desk=['j106','model-72','acid-303','ottmpc','boris-granular','dexed-dx7']
 aw=sorted(i for i in P if i.startswith('aw-'))
 used=set(['daemon-listen']+orig+emu+desk+sch+aw+['machinemodule-gen2','machinemodule-tap-gen2','monomodule-fx-gen2','monomodule-one-gen2'])
 mine=[i for i,p in P.items() if p['repo'].startswith('sd88me/')]
