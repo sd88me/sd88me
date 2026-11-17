@@ -15,9 +15,9 @@ args = ap.parse_args()
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = args.out or os.path.join(ROOT, 'README.md')
 
-CATALOG_URLS = [  # first that works wins; the sd88me copy mirrors open-mpc's nightly
-    'https://raw.githubusercontent.com/sd88me/sd88me.github.io/main/mpc-vst-plugins/catalog.json',
+CATALOG_URLS = [  # first that works wins; the sd88me copy is the old mirror, kept only as a fallback
     'https://open-mpc.github.io/catalog.json',
+    'https://raw.githubusercontent.com/sd88me/sd88me.github.io/main/mpc-vst-plugins/catalog.json',
 ]
 COUNTS_URL = 'https://openmpc-signals.open-mpc.workers.dev/api/counts'
 
@@ -46,7 +46,7 @@ d = load_catalog()
 C = load_counts()
 
 P={p['id']:p for p in d['plugins']}
-SITE='https://sd88me.github.io/mpc-vst-plugins'
+SITE='https://open-mpc.github.io'
 def short(s,n=140):
     s=re.sub(r'\s+',' ',s)
     first=s.split(': ')[0] if ': ' in s[:80] and len(s.split(': ')[0])>12 else s.split('. ')[0].rstrip('.')
@@ -141,11 +141,11 @@ Modules for [Schwung](https://github.com/sd88me/schwung) on Ableton Move, and th
 
 | Module | What it is | Also on MPC | Latest |
 |---|---|---|---|
-{schrow('acid','[Acid](https://sd88me.github.io/mpc-vst-plugins/p/acid.html)','TB-303-style acid sequencer')}
-{schrow('maze','[Maze](https://sd88me.github.io/mpc-vst-plugins/p/maze-sequencer.html)','Generative sequencer and voice')}
-{schrow('clementineXT','[Clementine-XT](https://sd88me.github.io/mpc-vst-plugins/p/clementine-xt.html)','Microwave II/XT wavetable synth')}
-{schrow('model72','[Model-72](https://sd88me.github.io/mpc-vst-plugins/p/model-72.html)','Minimoog Model-D circuit model')}
-{schrow('machinemodule','[Machinemodule](https://sd88me.github.io/mpc-vst-plugins/p/machinemodule.html)','Elektron Machinedrum sound engine')}
+{schrow('acid','[Acid]({SITE}/p/acid.html)','TB-303-style acid sequencer')}
+{schrow('maze','[Maze]({SITE}/p/maze-sequencer.html)','Generative sequencer and voice')}
+{schrow('clementineXT','[Clementine-XT]({SITE}/p/clementine-xt.html)','Microwave II/XT wavetable synth')}
+{schrow('model72','[Model-72]({SITE}/p/model-72.html)','Minimoog Model-D circuit model')}
+{schrow('machinemodule','[Machinemodule]({SITE}/p/machinemodule.html)','Elektron Machinedrum sound engine')}
 {schrow('kit-builder','—','Drum kit builder')}
 
 ### Schwung → MPC
