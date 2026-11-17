@@ -9,7 +9,7 @@ Free, open source, and built on the machines they run on.
 [![Install guide](https://img.shields.io/badge/How%20to-install-2b2f36?style=for-the-badge)](https://sd88me.github.io/mpc-vst-plugins/install.html)
 [![Tips](https://img.shields.io/badge/Ko--fi-tip%20jar-ff5e5b?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/sd88me)
 
-[Originals](#originals) · [Emulator ports](#emulator-ports) · [Schwung](#schwung) · [Other ports](#other-ports) · [Airwindows](#airwindows-collections) · [Tools](#add-ins--tools)
+[Made by me](#made-by-me) · [Emulator ports](#emulator-ports) · [Schwung](#schwung) · [Other ports](#other-ports) · [Airwindows](#airwindows-collections) · [Tools](#add-ins--tools)
 
 </div>
 
@@ -21,9 +21,9 @@ Every plugin below has a release page, and the **Latest** badge always shows the
 
 > Plugins that emulate hardware never ship ROMs or firmware. Where one needs ROM files, you supply your own.
 
-## Originals
+## Made by me
 
-Written from scratch by me, no upstream code. Sequencers, tools and instruments, including synths modelled on classic hardware.
+Plugins I wrote for the MPC: sequencers, tools and instruments, many inspired by classic hardware. Credits for anything borrowed are on each plugin's page.
 
 | | Plugin | What it is | Type | Latest |
 |---|---|---|---|---|
